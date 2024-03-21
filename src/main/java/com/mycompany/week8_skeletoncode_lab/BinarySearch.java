@@ -27,7 +27,24 @@ public class BinarySearch {
         }
         return index;
     }
-    //ToDo 2: Call the above method and test the algorithm  
-    // provide time and space analysis 
+
+    public static void main(String[] args) {
+        int[] array = {1,3,5,7,};
+        int key = 7;
+        int low = 0;
+        int high = array.length - 1;
+
+        int index = runBinarySearchIteratively(array, key, low, high);
+        if (index != Integer.MAX_VALUE) {
+            System.out.print("Key: " + key + " at index " + index);
+        }
+    }
 
 }
+
+// Binary search algorithms have a time complexity of O(log n)
+// This is because a binary search divides the array down in each iteration until the key is found
+// It differs from a linear search because it doesn't check each element
+
+// The algorithms space complexity is O(1)
+// The reason is because the algorithm only requires a constant amount of memory in terms of the variables
